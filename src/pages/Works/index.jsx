@@ -38,6 +38,7 @@ const Works = () => {
                 alt={work.title}
                 className={styles.image}
                 loading={index === 0 ? "eager" : "lazy"}
+                fetchpriority={index === 0 ? "high" : undefined}
               />
               <div className={styles.overlay} />
               <div className={styles.workTitle}>{work.title}</div>

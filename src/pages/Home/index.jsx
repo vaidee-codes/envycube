@@ -34,9 +34,10 @@ const Home = () => {
             <img
               {...getImage(image)}
               alt={alt}
-              // The first slide is the largest thing on screen: load it right away.
-              loading={index === 0 ? "eager" : "lazy"}
-              fetchpriority={index === 0 ? "high" : undefined}
+              // The first slide is what visitors see first: fetch it before
+              // anything else. The other slides download right after, so they
+              // are ready when the visitor swipes.
+              fetchpriority={index === 0 ? "high" : "low"}
             />
           </Link>
         ))}

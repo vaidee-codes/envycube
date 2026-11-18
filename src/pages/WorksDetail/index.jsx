@@ -4,6 +4,7 @@ import { Row, Col } from "antd";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 import { getImage } from "../../assets/images";
 import usePageMeta from "../../hooks/usePageMeta";
+import withLoadGifScreen from "../../hoc/withLoadGifScreen";
 import NotFound from "../../molecules/NotFound";
 import styles from "./WorksDetail.module.scss";
 
@@ -38,6 +39,7 @@ const WorksDetailPage = ({ id, work }) => {
                 alt={`${work.title} design ${index + 1} of ${work.images.length}`}
                 className={styles.image}
                 loading={index === 0 ? "eager" : "lazy"}
+                fetchpriority={index === 0 ? "high" : undefined}
               />
             </div>
           </Col>
@@ -65,4 +67,4 @@ const WorksDetail = () => {
   return <WorksDetailPage id={id} work={work} />;
 };
 
-export default WorksDetail;
+export default withLoadGifScreen(WorksDetail);
