@@ -11,7 +11,7 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const { pathname } = useLocation();
 
-  const isHomePage = pathname === "/home" && !showMenu;
+  const isHomePage = pathname === "/" && !showMenu;
 
   const toggleShowMenu = () => {
     setShowMenu((prevState) => !prevState);
@@ -25,23 +25,29 @@ const Header = () => {
           isHomePage ? styles.homePageHeader : ""
         }`}
       >
-        <NavLink className={styles.title} to="/home">
-          <img
-            src={isHomePage ? logoWhite : logoBlack}
-            alt="logo"
-            loading="lazy"
-          />
+        <NavLink className={styles.title} to="/">
+          {/* Decorative: the link's text already names the firm */}
+          <img src={isHomePage ? logoWhite : logoBlack} alt="" />
           <div>
             <h3>ENVYCUBE</h3>
             <span>ARCHITECTS</span>
           </div>
         </NavLink>
         <div className={styles.rightContainer}>
-          {showMenu ? (
-            <CloseOutlined onClick={toggleShowMenu} />
-          ) : (
-            <MenuOutlined onClick={toggleShowMenu} />
-          )}
+          <button
+            type="button"
+            className={styles.menuButton}
+            onClick={toggleShowMenu}
+            aria-label={showMenu ? "Close menu" : "Open menu"}
+            aria-expanded={showMenu}
+            aria-controls="app-menu"
+          >
+            {showMenu ? (
+              <CloseOutlined aria-hidden="true" />
+            ) : (
+              <MenuOutlined aria-hidden="true" />
+            )}
+          </button>
         </div>
       </header>
       <AppMenu open={showMenu} onClickLink={toggleShowMenu} />
