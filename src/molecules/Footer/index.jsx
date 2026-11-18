@@ -5,9 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className={styles.footerContainer}>
-      <center>
-        &copy; {currentYear} Envycube Architects. All rights reserved.
-      </center>
+      &copy; {currentYear} Envycube Architects. All rights reserved.
     </footer>
   );
 };

@@ -2,44 +2,30 @@ import React from "react";
 import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import Header from "../../molecules/Header";
 import Footer from "../../molecules/Footer";
+import NotFound from "../../molecules/NotFound";
 import Home from "../Home";
 import About from "../About";
 import Services from "../Services";
-import styles from "./App.module.scss";
 import Works from "../Works";
 import WorksDetail from "../WorksDetail";
 import Contact from "../Contact";
+import styles from "./App.module.scss";
 
 function App() {
-  // const onScroll = () => {
-  //   const header = document.getElementById("header");
-  //   const aboutPage = document.getElementById("about");
-  //   if (aboutPage) {
-  //     const { top } = aboutPage.getBoundingClientRect();
-  //     if (top < -80) {
-  //       header.classList.add("scrolled");
-  //     } else {
-  //       header.classList.remove("scrolled");
-  //     }
-  //   } else {
-  //     header.classList.remove("scrolled");
-  //   }
-  // };
   return (
     <BrowserRouter>
-      <div
-        className={styles.App}
-        // onScroll={onScroll}
-      >
+      <div className={styles.App}>
         <Header />
         <Routes>
-          <Route exact path="/home" Component={Home} />
-          <Route exact path="/about" Component={About} />
-          <Route exact path="/services" Component={Services} />
-          <Route exact path="/works" Component={Works} />
-          <Route exact path="/works/:id" Component={WorksDetail} />
-          <Route exact path="/contact" Component={Contact} />
-          <Route path="/" element={<Navigate to="/home" replace={true} />} />
+          <Route path="/" Component={Home} />
+          <Route path="/about" Component={About} />
+          <Route path="/services" Component={Services} />
+          <Route path="/works" Component={Works} />
+          <Route path="/works/:id" Component={WorksDetail} />
+          <Route path="/contact" Component={Contact} />
+          {/* Old home URL, kept so existing links and bookmarks still work */}
+          <Route path="/home" element={<Navigate to="/" replace />} />
+          <Route path="*" Component={NotFound} />
         </Routes>
         <Footer />
       </div>

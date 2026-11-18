@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { getImage } from "../../assets/images";
 import styles from "./Services.module.scss";
 
 const Card = ({ imageSrc, header, description }) => {
@@ -24,7 +25,16 @@ const Card = ({ imageSrc, header, description }) => {
 
   return (
     <div className={styles.card}>
-      <img src={imageSrc} alt="Card" className={styles.cardImage} />
+      {/* Decorative: the card heading describes the service */}
+      <img
+        {...getImage(
+          imageSrc,
+          "(max-width: 700px) 90vw, (max-width: 900px) 45vw, 30vw"
+        )}
+        alt=""
+        className={styles.cardImage}
+        loading="lazy"
+      />
       <div
         ref={ref}
         className={`${styles.cardContent} ${isVisible ? styles.visible : ""}`}
@@ -52,9 +62,9 @@ const CardContainer = ({ cards }) => (
   <div className={styles.cardContainer}>
     <h1 className={styles.servicesHeading}>Services</h1>
     <div className={styles.cards}>
-      {cards.map((card, index) => (
+      {cards.map((card) => (
         <Card
-          key={index}
+          key={card.header}
           imageSrc={card.imageSrc}
           header={card.header}
           description={card.description}

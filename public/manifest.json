@@ -1,8 +1,12 @@
 {
-  "short_name": "Envy Cube",
-  "name": "Envy Cube",
-  "icons": [],
-  "start_url": ".",
+  "short_name": "Envycube",
+  "name": "Envycube Architects",
+  "icons": [
+    { "src": "logo_black.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "logo192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "logo512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

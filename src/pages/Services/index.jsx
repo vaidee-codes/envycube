@@ -1,17 +1,22 @@
 import React from "react";
 import CardContainer from "./Cards";
-import ArchitectureDesign from "../../assets/works/services/architecturedesign.jpg";
-import Interiordesign from "../../assets/works/services/interiordesign.jpg";
-import LandscapeArchitecture from "../../assets/works/services/landscape architecture.jpg";
+import usePageMeta from "../../hooks/usePageMeta";
 import withLoadGifScreen from "../../hoc/withLoadGifScreen";
 import styles from "./Services.module.scss";
+
+// Image keys refer to src/assets/works/<folder>/<name> (see src/assets/images.js).
+// Landscape Architecture currently reuses the architecture photo: there is no
+// landscape photo yet.
+const ArchitectureDesign = "services/architecturedesign";
+const Interiordesign = "services/interiordesign";
+const LandscapeArchitecture = "services/architecturedesign";
 
 const serviceCards = [
   {
     imageSrc: ArchitectureDesign,
-    header: "Architecure Design",
+    header: "Architecture Design",
     description:
-      "Feasibility Studies, Site Analysis, Space Planning, Massing, Building Approval Liasoning, Soil Testing, Structural Design, HVAC design, MEP Design, Natural Lighting and Ventilation Design, Solar Passive Design, Engineering and Working Drawings.",
+      "Feasibility Studies, Site Analysis, Space Planning, Massing, Building Approval Liaising, Soil Testing, Structural Design, HVAC Design, MEP Design, Natural Lighting and Ventilation Design, Solar Passive Design, Engineering and Working Drawings.",
   },
   {
     imageSrc: Interiordesign,
@@ -23,7 +28,7 @@ const serviceCards = [
     imageSrc: LandscapeArchitecture,
     header: "Landscape Architecture",
     description:
-      "Site Analysis, Shadow Study, Site Planning, Softscape Design, Hardscape Design, Draining Design, Material Pallete, Play Area Design, Water Body Design, Plant Specification, Irrigation Scheme, Outdoor Lighting Design, Aerial Views.",
+      "Site Analysis, Shadow Study, Site Planning, Softscape Design, Hardscape Design, Drainage Design, Material Palette, Play Area Design, Water Body Design, Plant Specification, Irrigation Scheme, Outdoor Lighting Design, Aerial Views.",
   },
   {
     imageSrc: ArchitectureDesign,
@@ -46,6 +51,13 @@ const serviceCards = [
 ];
 
 const Services = () => {
+  usePageMeta({
+    title: "Services",
+    description:
+      "Architecture design, interior design, landscape architecture, project management, turnkey contracting and civil construction in Trichy.",
+    path: "/services",
+  });
+
   return (
     <div className={styles.containter}>
       <CardContainer cards={serviceCards} />

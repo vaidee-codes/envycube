@@ -1,38 +1,44 @@
-// Works.js
-
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./Works.module.scss";
-import bedroomImage from "../../assets/works/bedroom/1.jpeg";
-import livingroomImage from "../../assets/works/living room/1.jpeg";
-import washroomImage from "../../assets/works/bathroom/1.jpeg";
-import kitchenImage from "../../assets/works/kitchen/1.jpeg";
-import diningroomImage from "../../assets/works/dining room/1.jpeg";
-import utilityImage from "../../assets/works/utility areas/1.jpeg";
+import { getImage } from "../../assets/images";
+import usePageMeta from "../../hooks/usePageMeta";
 import withLoadGifScreen from "../../hoc/withLoadGifScreen";
+import styles from "./Works.module.scss";
 
 const worksData = [
-  { id: 1, image: bedroomImage, title: "Bedroom Design" },
-  { id: 2, image: livingroomImage, title: "Living Room Design" },
-  { id: 3, image: washroomImage, title: "Washroom Design" },
-  { id: 4, image: kitchenImage, title: "Kitchen Design" },
-  { id: 5, image: diningroomImage, title: "Dining hall Design" },
-  { id: 6, image: utilityImage, title: "utility areas Design" },
+  { id: 1, image: "bedroom/1", title: "Bedroom Design" },
+  { id: 2, image: "living room/1", title: "Living Room Design" },
+  { id: 3, image: "bathroom/1", title: "Washroom Design" },
+  { id: 4, image: "kitchen/1", title: "Kitchen Design" },
+  { id: 5, image: "dining room/1", title: "Dining Room Design" },
+  { id: 6, image: "utility areas/1", title: "Utility Area Design" },
 ];
 
 const Works = () => {
+  usePageMeta({
+    title: "Our Works",
+    description:
+      "Bedroom, living room, washroom, kitchen, dining and utility area interiors designed by Envycube Architects, Trichy.",
+    path: "/works",
+  });
+
   return (
     <div className={styles.works}>
       <h1 className={styles.title}>Our Works</h1>
       <div className={styles.worksGrid}>
-        {worksData.map((work) => (
+        {worksData.map((work, index) => (
           <Link
             key={work.id}
             to={`/works/${work.id}`}
             className={styles.workLink}
           >
             <div className={styles.workImage}>
-              <img src={work.image} alt={work.title} className={styles.image} />
+              <img
+                {...getImage(work.image)}
+                alt={work.title}
+                className={styles.image}
+                loading={index === 0 ? "eager" : "lazy"}
+              />
               <div className={styles.overlay} />
               <div className={styles.workTitle}>{work.title}</div>
             </div>

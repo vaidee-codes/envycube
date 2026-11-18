@@ -1,0 +1,344 @@
+{
+  "bedroom/1": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "bedroom/2": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "bedroom/3": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "bedroom/4": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "bedroom/5": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "bedroom/6": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "bedroom/7": {
+    "width": 2560,
+    "height": 1774,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "living room/1": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "living room/2": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "living room/3": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "living room/4": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "living room/5": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "living room/6": {
+    "width": 1600,
+    "height": 809,
+    "widths": [
+      960,
+      1600
+    ]
+  },
+  "living room/7": {
+    "width": 1600,
+    "height": 816,
+    "widths": [
+      960,
+      1600
+    ]
+  },
+  "bathroom/1": {
+    "width": 1439,
+    "height": 2560,
+    "widths": [
+      960,
+      1439
+    ]
+  },
+  "bathroom/2": {
+    "width": 1357,
+    "height": 2560,
+    "widths": [
+      960,
+      1357
+    ]
+  },
+  "bathroom/3": {
+    "width": 1738,
+    "height": 2560,
+    "widths": [
+      960,
+      1738
+    ]
+  },
+  "bathroom/4": {
+    "width": 1525,
+    "height": 2560,
+    "widths": [
+      960,
+      1525
+    ]
+  },
+  "kitchen/1": {
+    "width": 2560,
+    "height": 1999,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "kitchen/2": {
+    "width": 1600,
+    "height": 953,
+    "widths": [
+      960,
+      1600
+    ]
+  },
+  "dining room/1": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "dining room/2": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "dining room/3": {
+    "width": 1500,
+    "height": 1500,
+    "widths": [
+      960,
+      1500
+    ]
+  },
+  "utility areas/1": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "utility areas/2": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "utility areas/3": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "utility areas/4": {
+    "width": 2560,
+    "height": 1440,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "utility areas/5": {
+    "width": 1600,
+    "height": 954,
+    "widths": [
+      960,
+      1600
+    ]
+  },
+  "utility areas/6": {
+    "width": 1426,
+    "height": 1600,
+    "widths": [
+      960,
+      1426
+    ]
+  },
+  "utility areas/7": {
+    "width": 1415,
+    "height": 1600,
+    "widths": [
+      960,
+      1415
+    ]
+  },
+  "hero/bedroom1": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "hero/bedroom2": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "hero/dining": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "hero/living": {
+    "width": 2560,
+    "height": 1439,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "hero/others": {
+    "width": 2560,
+    "height": 1440,
+    "widths": [
+      960,
+      1920,
+      2560
+    ]
+  },
+  "services/architecturedesign": {
+    "width": 1500,
+    "height": 1000,
+    "widths": [
+      960,
+      1500
+    ]
+  },
+  "services/hero": {
+    "width": 1500,
+    "height": 716,
+    "widths": [
+      960,
+      1500
+    ]
+  },
+  "services/interiordesign": {
+    "width": 1500,
+    "height": 1125,
+    "widths": [
+      960,
+      1500
+    ]
+  },
+  "about/member1": {
+    "width": 939,
+    "height": 1028,
+    "widths": [
+      939
+    ]
+  },
+  "about/member2": {
+    "width": 696,
+    "height": 870,
+    "widths": [
+      696
+    ]
+  }
+}

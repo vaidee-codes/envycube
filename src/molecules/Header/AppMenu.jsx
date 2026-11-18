@@ -1,35 +1,39 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Drawer } from "antd";
+import { InstagramOutlined } from "@ant-design/icons";
 import styles from "./Header.module.scss";
-import {
-  // FacebookOutlined,
-  InstagramOutlined,
-  // YoutubeOutlined,
-} from "@ant-design/icons";
 
-const MenuItems = ["home", "about", "services", "works", "contact"];
+const MenuItems = [
+  { label: "HOME", to: "/" },
+  { label: "ABOUT", to: "/about" },
+  { label: "SERVICES", to: "/services" },
+  { label: "WORKS", to: "/works" },
+  { label: "CONTACT", to: "/contact" },
+];
 
 const AppMenu = ({ open, onClickLink }) => {
   return (
     <Drawer
       rootClassName={styles.drawerContainer}
-      headerStyle={{ display: "none" }}
+      styles={{ header: { display: "none" } }}
       open={open}
       placement="bottom"
+      aria-label="Site menu"
     >
-      <div className={styles.appMenuContent}>
-        <nav>
-          {MenuItems.map((menu) => (
-            <div key={menu}>
+      <div id="app-menu" className={styles.appMenuContent}>
+        <nav aria-label="Main">
+          {MenuItems.map(({ label, to }) => (
+            <div key={to}>
               <NavLink
                 className={({ isActive }) =>
                   `${styles.link} ${isActive ? styles.active : ""}`
                 }
                 onClick={onClickLink}
-                to={`/${menu}`}
+                to={to}
+                end
               >
-                {menu.toLocaleUpperCase()}
+                {label}
               </NavLink>
             </div>
           ))}
@@ -38,17 +42,15 @@ const AppMenu = ({ open, onClickLink }) => {
           ARCHITECTURE | INTERIOR | PLANNING | CONSTRUCTION
         </p>
         <footer>
-          {/* <FacebookOutlined /> */}
           <a
             className={styles.socialLink}
             href="https://www.instagram.com/envycube_architects"
             target="_blank"
-            referrerPolicy="no-referrer"
             rel="noreferrer"
+            aria-label="Envycube Architects on Instagram"
           >
-            <InstagramOutlined />
+            <InstagramOutlined aria-hidden="true" />
           </a>
-          {/* <YoutubeOutlined /> */}
         </footer>
       </div>
     </Drawer>
