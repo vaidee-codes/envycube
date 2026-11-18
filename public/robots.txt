@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://envycube-vaidee.vercel.app/sitemap.xml
+Sitemap: https://www.envycubearchitects.com/sitemap.xml

@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
 // Public address of the site, used for canonical and social-share URLs.
-// Update this if the site moves to a custom domain (also in public/index.html,
+// Update this if the domain changes (also in public/index.html,
 // public/robots.txt and public/sitemap.xml).
-export const SITE_URL = "https://envycube-vaidee.vercel.app";
+export const SITE_URL = "https://www.envycubearchitects.com";
 
 const SITE_NAME = "Envycube Architects";
 
