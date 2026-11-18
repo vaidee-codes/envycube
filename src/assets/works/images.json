@@ -258,51 +258,6 @@
       1415
     ]
   },
-  "hero/bedroom1": {
-    "width": 2560,
-    "height": 1439,
-    "widths": [
-      960,
-      1920,
-      2560
-    ]
-  },
-  "hero/bedroom2": {
-    "width": 2560,
-    "height": 1439,
-    "widths": [
-      960,
-      1920,
-      2560
-    ]
-  },
-  "hero/dining": {
-    "width": 2560,
-    "height": 1439,
-    "widths": [
-      960,
-      1920,
-      2560
-    ]
-  },
-  "hero/living": {
-    "width": 2560,
-    "height": 1439,
-    "widths": [
-      960,
-      1920,
-      2560
-    ]
-  },
-  "hero/others": {
-    "width": 2560,
-    "height": 1440,
-    "widths": [
-      960,
-      1920,
-      2560
-    ]
-  },
   "services/architecturedesign": {
     "width": 1500,
     "height": 1000,

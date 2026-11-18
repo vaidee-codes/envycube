@@ -7,12 +7,12 @@ import withLoadGifScreen from "../../hoc/withLoadGifScreen";
 import styles from "./Home.module.scss";
 
 const slides = [
-  { image: "hero/bedroom1", alt: "Bedroom interior by Envycube Architects", to: "/works/1" },
-  { image: "hero/bedroom2", alt: "Bedroom interior with custom wardrobe", to: "/works/1" },
-  { image: "hero/dining", alt: "Dining room interior", to: "/works/5" },
+  { image: "bedroom/1", alt: "Bedroom interior by Envycube Architects", to: "/works/1" },
+  { image: "bedroom/5", alt: "Bedroom interior with custom wardrobe", to: "/works/1" },
+  { image: "dining room/2", alt: "Dining room interior", to: "/works/5" },
   { image: "kitchen/2", alt: "Modular kitchen interior", to: "/works/4" },
-  { image: "hero/living", alt: "Living room interior", to: "/works/2" },
-  { image: "hero/others", alt: "Utility area interior", to: "/works/6" },
+  { image: "living room/5", alt: "Living room interior", to: "/works/2" },
+  { image: "utility areas/4", alt: "Utility area interior", to: "/works/6" },
 ];
 
 const Home = () => {

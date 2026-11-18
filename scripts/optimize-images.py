@@ -15,7 +15,7 @@ from PIL import Image
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent / "src" / "assets" / "works"
 PHOTO_DIRS = ["bedroom", "living room", "bathroom", "kitchen", "dining room",
-              "utility areas", "hero", "services", "about"]
+              "utility areas", "services", "about"]
 TARGET_WIDTHS = [960, 1920]
 MAX_WIDTH = 2560
 QUALITY = 80
